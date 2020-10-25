@@ -8,3 +8,4 @@ declare const Hovorun2510: { install: InstallFunction };
 export default Hovorun2510;
 
 export const HButton: VueConstructor<Vue>;
+export const HButtonClose: VueConstructor<Vue>;

@@ -1,6 +1,6 @@
 {
   "name": "hovorun2510",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "",
   "main": "dist/hovorun2510.ssr.js",
   "browser": "dist/hovorun2510.esm.js",
@@ -13,12 +13,9 @@
     "src/**/*.vue"
   ],
   "scripts": {
-    "serve": "vue-cli-service serve dev/index.ts",
-    "build:demo": "vue-cli-service build dev/index.ts --dest demo",
-    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
-    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
-    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+    "dev": "vue-cli-service serve dev/index.ts",
+    "build:dev": "vue-cli-service build dev/index.ts --dest demo",
+    "build:lib": "cross-env NODE_ENV=production rollup --config build/rollup.config.js"
   },
   "dependencies": {
     "vue-router": "^3.4.7"
