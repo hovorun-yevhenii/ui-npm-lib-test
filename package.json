@@ -1,6 +1,6 @@
 {
   "name": "hovorun2510",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/hovorun2510.ssr.js",
   "browser": "dist/hovorun2510.esm.js",

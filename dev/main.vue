@@ -1,23 +1,33 @@
 <template>
   <div id="app">
-    <h-button @click="handleClick">
-      button
-    </h-button>
-    <router-link to="/foo">Перейти к Foo</router-link>
-    <router-view/>
+    <app-header :version="version" />
+
+    <section>
+      <side-bar />
+
+      <main>
+        <router-view />
+      </main>
+    </section>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import { HButton } from '@/entry';
-
-const config = require("../package.json");
+import * as config from '../package.json';
+import AppHeader from './components/AppHeader.vue';
+import SideBar from './components/SideBar.vue';
 
 export default Vue.extend({
   name: 'ServeDev',
   components: {
-    HButton,
+    AppHeader,
+    SideBar
+  },
+  computed: {
+    version() {
+      return config.version
+    }
   },
   methods: {
     handleClick() {
@@ -26,3 +36,31 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style lang="scss">
+ html,
+ body {
+   padding: 0;
+   margin: 0;
+ }
+
+ * {
+   box-sizing: border-box;
+ }
+ 
+ [id='app'] {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+   section {
+     display: flex;
+     flex-grow: 1;
+   }
+
+   main {
+     flex-grow: 1;
+     padding: 16px;
+   }
+ }
+</style>
