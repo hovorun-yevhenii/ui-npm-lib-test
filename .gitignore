@@ -1,0 +1,15 @@
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.vscode-test
+.yarn/cache
+.yarn/unplugged
+.yarn/install-state.gz
+.vs/
+.npm
+.idea
+
+node_modules/
+dist
+demo
