@@ -1,14 +1,14 @@
 <template>
   <header>
-    <router-link to="/">{{config.default.name}}</router-link>
-    <span>{{ config.default.version }}</span>
+    <router-link to="/">{{config.name}}</router-link>
+    <span>{{ config.version }}</span>
   </header>
 </template>
 
 <script>
 export default {
-  name: "AppHeader",
-  props: ['config']
+  name: 'AppHeader',
+  inject: ['config'],
 }
 </script>
 

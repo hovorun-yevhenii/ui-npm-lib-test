@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-header :config="config"/>
+    <app-header />
 
     <div class="section">
       <side-bar/>
@@ -16,15 +16,18 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import * as config from '../package.json';
+import config from '../package.json';
 import AppHeader from './components/AppHeader.vue';
 import SideBar from './components/SideBar.vue';
 
 export default Vue.extend({
-  name: 'ServeDev',
+  name: 'Demo',
   components: {
     AppHeader,
     SideBar
+  },
+  provide: {
+    config
   },
   data() {
     return {
@@ -71,13 +74,10 @@ body {
   }
 
   .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 100%;
     max-width: 900px;
     margin: 0 auto;
-    padding: 32px ;
+    padding: 32px;
   }
 
   .fade-enter-active, .fade-leave-active {

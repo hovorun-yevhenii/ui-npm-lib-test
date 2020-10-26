@@ -20,7 +20,7 @@ export default new VueRouter({
         {
             path: '/components',
             name: 'components',
-            component: () => import('../components/ComponentWrapper.vue'),
+            component: () => import('../components/ComponentPage.vue'),
             children: componentRoutes
         }
     ]

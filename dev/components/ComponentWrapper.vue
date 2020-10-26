@@ -1,19 +1,16 @@
 <template>
-  <div class="wrapper">
-    <h1>{{$route.name}}</h1>
-    <router-view />
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequuntur culpa fuga illo laudantium placeat quasi quos? Autem consectetur eligendi est, explicabo fuga libero nisi nostrum omnis quaerat recusandae temporibus!
-    </p>
+  <div class="sandbox">
+    <slot />
   </div>
 </template>
 
-<style scoped>
-h1 {
-  margin-bottom: 64px;
-}
-
-p {
-  margin-top: 64px;
-}
+<style lang="scss" scoped>
+  .sandbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    border: 1px solid rgba(0,0,0,.12);
+    background: #eee;
+  }
 </style>

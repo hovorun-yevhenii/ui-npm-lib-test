@@ -12,15 +12,11 @@
 import AppLogo from './AppLogo.vue';
 
 export default {
-  name: "AppHome",
+  name: 'AppHome',
   components: {
     AppLogo
   },
-  computed: {
-    config() {
-      return this.$parent.config.default;
-    }
-  }
+  inject: ['config']
 }
 </script>
 
