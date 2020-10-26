@@ -17,7 +17,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
   button {
-    padding: 10px 32px;
+    padding: 10px 15px;
     border: 1px solid #333;
     border-radius: 20px;
     background: #EEE;

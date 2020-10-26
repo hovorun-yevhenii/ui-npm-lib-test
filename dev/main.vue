@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <app-header :version="version" />
+    <app-header :config="config"/>
 
-    <section>
-      <side-bar />
+    <div class="section">
+      <side-bar/>
 
       <main>
-        <router-view />
+        <transition name="fade" mode="out-in">
+          <router-view :key="$route.fullPath" />
+        </transition>
       </main>
-    </section>
+    </div>
   </div>
 </template>
 
@@ -24,43 +26,64 @@ export default Vue.extend({
     AppHeader,
     SideBar
   },
-  computed: {
-    version() {
-      return config.version
-    }
-  },
-  methods: {
-    handleClick() {
-      console.log(config.version)
+  data() {
+    return {
+      config
     }
   }
 });
 </script>
 
 <style lang="scss">
- html,
- body {
-   padding: 0;
-   margin: 0;
- }
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 
- * {
-   box-sizing: border-box;
- }
- 
- [id='app'] {
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[id='app'] {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Syne Mono', monospace;
+  color: #444;
 
-   section {
-     display: flex;
-     flex-grow: 1;
-   }
+  .section {
+    display: flex;
+    flex-grow: 1;
+  }
 
-   main {
-     flex-grow: 1;
-     padding: 16px;
-   }
- }
+  main {
+    flex-grow: 1;
+    padding: 16px;
+    border-left: 1px solid #999;
+    border-top: 1px solid #999;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 32px ;
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: .3s ease-in-out;
+  }
+
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
+}
 </style>

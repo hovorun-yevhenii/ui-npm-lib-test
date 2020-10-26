@@ -9,7 +9,7 @@ export default Object.keys(entries)
 
         return {
             name,
-            path: `/${path}`,
+            path: `/component/${path}`,
             component: () => import(`../pages/${name}.vue`)
         }
     });

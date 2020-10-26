@@ -1,14 +1,14 @@
 <template>
   <header>
-    <router-link to="/">JIMU UI</router-link>
-    <span>{{ version }}</span>
+    <router-link to="/">{{config.default.name}}</router-link>
+    <span>{{ config.default.version }}</span>
   </header>
 </template>
 
 <script>
 export default {
   name: "AppHeader",
-  props: ['version']
+  props: ['config']
 }
 </script>
 
@@ -18,7 +18,6 @@ header {
   background-color: #eee;
   display: flex;
   justify-content: space-between;
+  text-transform: uppercase;
 }
-
-
 </style>

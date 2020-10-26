@@ -1,7 +1,7 @@
 {
   "name": "hovorun2510",
   "version": "0.0.10",
-  "description": "",
+  "description": "Vue UI Library with beautiful custom components",
   "main": "dist/hovorun2510.ssr.js",
   "browser": "dist/hovorun2510.esm.js",
   "module": "dist/hovorun2510.esm.js",

@@ -9,8 +9,19 @@ export default new VueRouter({
     routes: [
         {
             path: '/',
+            name: 'home',
             component: () => import('../components/AppHome.vue')
         },
-        ...componentRoutes
+        {
+            path: '/colors',
+            name: 'colors',
+            component: () => import('../components/AppColors.vue')
+        },
+        {
+            path: '/components',
+            name: 'components',
+            component: () => import('../components/ComponentWrapper.vue'),
+            children: componentRoutes
+        }
     ]
 });
