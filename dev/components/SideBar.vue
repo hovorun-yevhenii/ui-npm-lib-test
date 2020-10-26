@@ -37,6 +37,7 @@ nav {
 
   .link.router-link-exact-active.router-link-active {
     padding-left: 16px;
+    font-weight: bold;
   }
 
   .subtitle {

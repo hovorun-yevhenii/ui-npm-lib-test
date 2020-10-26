@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <img src="https://www.flaticon.com/svg/static/icons/svg/949/949869.svg" alt="">
+    <app-logo/>
 
     <p>{{config.name}}</p>
 
@@ -9,8 +9,13 @@
 </template>
 
 <script>
+import AppLogo from './AppLogo.vue';
+
 export default {
   name: "AppHome",
+  components: {
+    AppLogo
+  },
   computed: {
     config() {
       return this.$parent.config.default;
@@ -25,13 +30,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  img {
-    margin: 5vw 0;
-    width: 20vw;
-    opacity: 0.8;
-    filter: saturate(0);
-  }
 
   p {
     font-size: 20px;
