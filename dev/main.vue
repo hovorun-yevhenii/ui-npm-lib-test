@@ -75,6 +75,8 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100%;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 32px ;
   }
 
