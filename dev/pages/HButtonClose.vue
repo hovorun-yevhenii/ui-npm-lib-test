@@ -58,12 +58,8 @@ export default {
   },
   methods: {
     handleClick() {
-      console.log('handleClick')
+      alert('handleClick')
     }
   }
 }
 </script>
-
-<style scoped>
-
-</style>

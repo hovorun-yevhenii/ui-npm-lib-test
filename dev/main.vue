@@ -48,6 +48,9 @@ body {
 
 * {
   box-sizing: border-box;
+  &::selection {
+    background: #34d80475;
+  }
 }
 
 [id='app'] {

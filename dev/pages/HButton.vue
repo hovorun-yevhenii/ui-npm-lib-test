@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     handleClick() {
-      console.log('handleClick')
+      alert('handleClick')
     }
   }
 }
